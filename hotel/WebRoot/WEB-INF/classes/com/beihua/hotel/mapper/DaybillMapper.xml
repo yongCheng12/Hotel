@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC 
+	"-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.beihua.hotel.mapper.DaybillMapper">
+	     <!-- 将日消费信息存入daybill -->
+	    <insert id="addDayBill" parameterType="Daybill">
+	       insert into daybill(realtotle,spending,remark)
+	        values (#{realtotle},#{spending},#{remark}) 
+	    </insert>
+	    <update id="updateDaybill" parameterType="Daybill">
+	       update daybill set realtotle=#{realtotle},spending=#{spending},remark=#{remark} 
+	       where time=#{time}
+	    </update>
+	     <!-- 分页显示 -->
+	    <select id="queryDayByPage" parameterType="Page" resultType="Daybill">
+			select * from daybill limit #{position} , #{size}
+		</select>
+		 <!-- 分页显示bill -->
+	    <select id="queryBillByPage" parameterType="Page" resultType="Bill">
+			SELECT * FROM bill WHERE TIME LIKE concat(concat('%',#{dTime}),'%') LIMIT #{position} , #{size}
+		</select>
+	    <!--按照时间查找daybill  -->
+	     <select id="queryDaybillByDate" parameterType="Daybill" resultType="Daybill">
+		    SELECT * FROM daybill WHERE TIME =#{time}
+		</select>
+		<!--全查daybill统计总消费 -->
+		<select id="qureyAllDaybill" resultType="Daybill">
+		   select * from daybill
+		</select>
+		<!--全查daybill统计总消费 -->
+		<select id="qureyMonthbill" parameterType="String" resultType="Daybill">
+		   select * from daybill WHERE TIME LIKE concat(concat('%',#{month}),'%')
+		</select>
+		<!--全查daybill统计总消费 -->
+		<select id="qureyYearbill" parameterType="String" resultType="Daybill">
+		   select * from daybill WHERE TIME LIKE concat(concat('%',#{year}),'%')
+		</select>
+	</mapper>

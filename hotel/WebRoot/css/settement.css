@@ -1,0 +1,21 @@
+.topdiv{width:100%;height:80px}
+.middlediv{width:100%;height:35px;background:#eeeeee;margin-top:5px}
+.bottomdiv{width:100%;height:500px;margin-top:5px}
+.footdiv{width:100%;height:80px;background:#eeeeee;margin-top:5px}
+.bottom-div{width:1030px;height:500px;margin-left:155px;background:#ffffff}
+.middle-login{width:70px;height:35px;margin-left:100px;float:left;text-align:center}
+.middle-register{width:70px;height:35px;margin-left:25px;float:left;text-align:center}
+.middle-personal{width:100px;height:35px;margin-left:795px;float:left;text-align:center}
+a{display:inline-block;vertical-align:middle; margin-top:5px;TEXT-DECORATION:none}
+.bottom-left{width:700px;height:480px;margin-left:10px;margin-top:10px;float:left;background:#eeeeee}
+.bottom-right{width:270px;height:480px;margin-left:40px;margin-top:10px;float:left;background:#eeeeee}
+.bottom-left-top{width:100%;height:90px;text-align:center;background:#eeeeee}
+.query{margin-left:360px;margin-top:30px;position:absolute}
+.bottom-left-down{width:100%;height:470px;margin-top:20px;background:#eeeeee}
+.queryCustomer{marin-top:45px}
+.showinfo{width:910px;height:368px;margin-left:58px;margin-top:20px;background:#eeeeee}
+td{text-align:center;}
+.showtotal{width:1010px;height:368px;margin-left:8px;margin-top:20px;background:#eeeeee}
+.page{margin-top:400px}
+.showdaybillinfo{width:910px;height:480px;margin-left:58px;margin-top:10px;background:#eeeeee;position:absolute}
+.printlist{width:910px;height:480px;margin-left:58px;margin-top:10px;background:#eeeeee;position:absolute}

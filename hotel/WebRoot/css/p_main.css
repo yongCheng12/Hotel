@@ -1,0 +1,20 @@
+.topdiv{width:100%;height:80px}
+.middlediv{width:100%;height:35px;background:#eeeeee;margin-top:5px}
+.bottomdiv{width:100%;height:500px;margin-top:5px}
+.footdiv{width:100%;height:80px;background:#eeeeee;margin-top:5px}
+.bottom-div{width:1030px;height:500px;margin-left:155px;background:#ffffff}
+.middle-login{width:70px;height:35px;margin-left:130px;float:left;text-align:center}
+.middle-register{width:70px;height:35px;margin-left:25px;float:left;text-align:center}
+.middle-personal{width:100px;height:35px;margin-left:920px;float:left;text-align:center}
+a{display:inline-block;vertical-align:middle; margin-top:5px;TEXT-DECORATION:none}
+.bottom-left{width:1010px;height:480px;margin-left:10px;margin-top:10px;float:left;background:#eeeeee}
+.bottom-right{width:270px;height:480px;margin-left:40px;margin-top:10px;float:left;background:#eeeeee}
+.bottom-left-top{width:100%;height:55px;text-align:center;}
+.bottom-left-bottom{width:100%;height:385px}
+.manager{width:200px;height:40px;margin-left:auto;margin-right:auto;margin-top:18px}
+.consumer{width:100px;height:45px;margin-left:170px;margin-top:40px;float:left;text-align:center;float:left;line-height:35px;background:#00eeee}
+.settement{width:100px;height:45px;margin-left:170px;margin-top:40px;float:left;text-align:center;float:left;line-height:35px;background:#00eeee}
+.showinfo{width:100px;height:45px;margin-left:170px;margin-top:40px;float:left;text-align:center;float:left;line-height:35px;background:#00eeee}
+.dayaccount{width:100px;height:45px;margin-left:170px;margin-top:50px;float:left;text-align:center;float:left;line-height:35px;background:#00eeee}
+.querytotal{width:100px;height:45px;margin-left:170px;margin-top:50px;float:left;text-align:center;float:left;line-height:35px;background:#00eeee}
+.printlist{width:100px;height:45px;margin-left:170px;margin-top:50px;float:left;text-align:center;float:left;line-height:35px;background:#00eeee}

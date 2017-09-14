@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC 
+	"-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.beihua.hotel.mapper.BillMapper">
+	     <!--添加消费信息 -->
+	    <insert id="addBill" parameterType="Bill">
+	       insert into bill(uname,roomcode,customer,idcard,r_money,foodbeverage,other,totle,time,remark,state)
+	        values (#{uname},#{roomcode},#{customer},#{idcard},#{r_money},#{foodbeverage},#{other},#{totle},#{time},#{remark},#{state})
+	    </insert> 
+	     <!--查询个人消费信息 -->
+	    <select id="queryPersonalBill" parameterType="Bill" resultType="Bill">
+	      select * from bill where roomcode=#{roomcode}
+	   </select>
+	   <!--消费结算 -->
+	   <update id="updateState" parameterType="Bill">
+	     update bill set state=#{state} where roomcode=#{roomcode}
+	   </update>
+	    <!--通过时间查询个人消费信息 -->
+	    <select id="queryPersonalByTime" parameterType="String" resultType="Bill">
+	      select * from bill where time=#{time}
+	    </select>
+	    <!-- 查询个人信息 -->
+	    <select id="queryPersonalInfo" parameterType="bill" resultType="Bill">
+	      select * from bill where customer=#{customer} and idcard=#{idcard}
+	    </select>
+	    <!-- 查询每天的消费信息信息 -->
+	    <select id="dayBill" parameterType="String" resultType="Bill">
+	      select * from bill where time LIKE concat(concat('%',#{time}),'%')
+	    </select>
+	     <!-- 将总消费信息存入daybill -->
+	    <insert id="addDayBill" parameterType="Daybill">
+	       insert into daybill(uname,d_r_money,d_foodbeverage,d_other,d_totle,time)
+	        values (#{uname},#{d_r_money},#{d_foodbeverage},#{d_other},#{d_totle},#{time})
+	    </insert>
+	   <!-- 查询daybill -->
+	   <select id="queryDayBill" parameterType="Daybill" resultType="Daybill">
+	       select * from daybill where time=#{time}
+  	   </select>
+  	    <!-- 修改总消费信息存入daybill -->
+  	    <update id="updateDaybill" parameterType="Daybill">
+  	     update daybill set d_r_money=#{d_r_money},d_foodbeverage=#{d_foodbeverage},d_other=#{d_other},d_totle=#{d_totle}
+  	       where time=#{time}
+  	    </update>
+  	     
+	   	</mapper>

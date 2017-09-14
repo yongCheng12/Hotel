@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC 
+	"-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.beihua.hotel.mapper.UserMapper">
+	  <!-- 查询用户 -->
+	   <select id="queryUser" resultType="User">
+	      select * from user
+	   </select>
+	   <!-- 查询修改后的用户 -->
+	   <select id="queryUserUpdate" resultType="User">
+	      select * from user
+	   </select>
+	   <!-- 删除用户 -->
+	   <delete id="delectUser" parameterType="User">
+	      delete from user where id=${id}
+	   </delete>
+	   <!-- 修改用户信息 -->
+	   <update id="updateUser" parameterType="User">
+	     
+	      UPDATE USER SET name=#{name},permissions=#{permissions} WHERE id=#{id};
+	   </update>
+	   <!-- 通过id查询用户 -->
+	   <select id="queryUserById" resultType="User" parameterType="User">
+	      select * from user where id=${id}
+	   </select>
+	   <!-- 查询密码 -->
+	   <select id="queryPassByName" resultType="String" parameterType="String">
+	      select password from user where name=#{name}
+	   </select>
+	   <!-- 通过name查询权限 -->
+	   <select id="queryPermissionsByName" resultType="String" parameterType="String">
+	      select permissions from user where name=#{name}
+	   </select>
+	   <!-- 注册用户 -->
+	    <insert id="addUser" parameterType="User" >
+			insert into user(name,password) values(#{name},#{password})
+		</insert>
+		<!-- 查询用户名 -->
+		<select id="queryUsername" parameterType="String" resultType="User">
+			select * from user where name=#{name}
+		</select>
+		
+		
+	</mapper>
